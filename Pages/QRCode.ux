@@ -1,0 +1,20 @@
+<Page ux:Class="QRCode">
+	<Router ux:Dependency="router"/>
+	<DockPanel>
+		<JavaScript File="QRCode.js"/>
+
+		<StatusBarBackground DockPanel.Dock="Top" />
+		<Text TextColor="#ff0000" Value="{err}" Alignment="Center" />
+
+		<ScrollView ClipToBounds="true">
+			<StackPanel>
+				<Each Items="{url}">
+						<Image Url="{url2}" Dock="Left" />
+				</Each>
+				<Button Text="Go Back" Clicked="{goBack}"/>
+			</StackPanel>
+		</ScrollView>
+	</DockPanel>
+</Page>
+
+

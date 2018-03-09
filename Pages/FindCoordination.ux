@@ -1,0 +1,21 @@
+<Page ux:Class="FindCoordination">
+	<Router ux:Dependency="router"/>
+	<DockPanel>
+		<JavaScript File="FindCoordination.js"/>
+
+		<StatusBarBackground DockPanel.Dock="Top" />
+		<Text TextColor="#ff0000" Value="{err}" Alignment="Center" />
+
+		<ScrollView ClipToBounds="true">
+			<StackPanel>
+				<TextBox PlaceholderText="Enter Start Location Street" Value="{search}" Alignment="Top" FontSize="25" />
+				<TextBox PlaceholderText="Enter Destination Location Street" Value="{search2}" Alignment="Top" FontSize="25" />
+				<Button Text="Search" IsEnabled="{inputed}" Clicked="{searchCoordinate}"/>
+				<Button Text="Find Distance" Clicked="{findDistance}"/>
+				<Button Text="View Map" Clicked="{viewMap}"/>
+				<Button Text="Go Back" Clicked="{goBack}"/>
+			</StackPanel>
+		</ScrollView>
+	</DockPanel>
+</Page>
+

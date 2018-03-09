@@ -1,0 +1,4 @@
+$: 879756368
+BuildCommand: build.bat
+RunCommand: run.bat
+Product: LoginPage.apk

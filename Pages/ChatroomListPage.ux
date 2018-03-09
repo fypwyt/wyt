@@ -1,0 +1,16 @@
+<Page ux:Class="ChatroomListPage">
+	<JavaScript File="ChatroomListPage.js"/>
+	<Router ux:Dependency="router"/>
+	<DockPanel>
+		<StackPanel Alignment="VerticalCenter" Margin="0,-150,50,0">
+			<TextBox PlaceholderText = "Type.." Value="{messageBox}" Alignment="Top" FontSize="25"/>
+			<Button Text="Send" IsEnabled="{inputed}" Clicked="{send}"/>
+			<Each Items="{info}">
+						<Text Value="{mes}"/>
+			</Each>	
+			<Button Text="refresh" Clicked="{refresh}"/>
+			<Button Text="Go Back" Clicked="{goBack}"/>
+		</StackPanel>
+	</DockPanel>
+</Page>
+

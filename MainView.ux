@@ -1,0 +1,20 @@
+<App>
+	<Router ux:Name="router"/>
+	<ClientPanel>
+		<Navigator DefaultPath="loginpage">
+			<LoginPage ux:Template="loginpage" router="router"/>
+			<MainPage ux:Template="mainpage" router="router"/>
+			<RegisterPage ux:Template="registerpage" router="router" />
+			<SettingPage ux:Template="settingpage" router="router" />
+			<ChangePassword ux:Template="changepassword" router="router" />
+			<ViewActivityPage ux:Template="viewactivitypage" router="router" />
+			<CreateActivityPage ux:Template="createactivitypage" router="router" />
+			<QRCode ux:Template="qrcode" router="router" />
+			<EditPage ux:Template="editpage" router="router" />
+			<JoinedActivity ux:Template="joinedactivity" router="router" />
+			<ChatroomListPage ux:Template="chatroomlistpage" router="router" />
+			<FindCoordination ux:Template="findcoordination" router="router" />
+			<HTML ux:Template="html" router="router" />
+		</Navigator>
+	</ClientPanel>
+</App>

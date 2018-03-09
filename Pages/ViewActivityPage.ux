@@ -1,0 +1,35 @@
+<Page ux:Class="ViewActivityPage">
+	<Router ux:Dependency="router"/>
+	<DockPanel>
+		<JavaScript File="ViewActivityPage.js"/>
+
+		<StatusBarBackground DockPanel.Dock="Top" />
+		<Text TextColor="#ff0000" Value="{err}" Alignment="Center" />
+
+		<ScrollView ClipToBounds="true">
+			<StackPanel>
+				<Text FontSize="35">View Activity Page</Text>
+				<Text FontSize="25">Search carpool: </Text>
+				<TextBox PlaceholderText="Search" Value="{search}" Alignment="Top" FontSize="15" />
+				<Button Text="Search" Clicked="{submitButton}"/>
+				<Text FontSize="25">Result: </Text>
+				<Each Items="{info}">
+						<Text>-------------------</Text>
+						<Text Value="{_id}"/>
+						<Text Value="{startTime}"/>
+						<Text Value="{endTime}"/>
+						<Text Value="{chatname}"/>
+				</Each>	
+				<TextBox PlaceholderText="Enter carpool id to join" Value="{joinText}" Alignment="Top" FontSize="15" />
+				<TextBox PlaceholderText="Enter your username" Value="{joinUserName}" Alignment="Top" FontSize="15" />
+				<TextBox PlaceholderText="Enter driver username" Value="{joinDriverName}" Alignment="Top" FontSize="15" />
+
+				<TextBox PlaceholderText="Enter chatroom name" Value="{joinChatroomName}" Alignment="Top" FontSize="15" />
+				<Button Text="Join!" IsEnabled="{inputed}" Clicked="{joinButton}"/>
+
+				<Button Text="Go Back" Clicked="{goBack}"/>
+			</StackPanel>
+		</ScrollView>
+	</DockPanel>
+</Page>
+

@@ -1,0 +1,20 @@
+<Page ux:Class="SettingPage">
+	<Router ux:Dependency="router"/>
+	<DockPanel>
+		<JavaScript File="SettingPage.js"/>
+
+		<StatusBarBackground DockPanel.Dock="Top" />
+		<Text TextColor="#ff0000" Value="{err}" Alignment="Center" />
+
+		<ScrollView ClipToBounds="true">
+			<StackPanel>
+				<Text>Application Setting </Text>
+				<Button Text="Log Out" Clicked="{goLoginPage}"/>
+				<Button Text="Change Password" Clicked="{goChangePassword}"/>
+				<Button Text="Update profile" Clicked="{goEditPage}"/>
+				<Button Text="Go Back" Clicked="{goBack}"/>
+			</StackPanel>
+		</ScrollView>
+	</DockPanel>
+</Page>
+

@@ -1,0 +1,21 @@
+<Page ux:Class="RegisterPage">
+	<Router ux:Dependency="router"/>
+	<DockPanel>
+		<JavaScript File="RegisterPage.js"/>
+
+		<ScrollView ClipToBounds="true">
+			<StackPanel Alignment="VerticalCenter" Margin="0,-150,50,0">
+				<Text FontSize="50">Registration</Text>
+				<Text>User Name: </Text>
+				<TextBox PlaceholderText="First and last name..." Value="{name}" Alignment="Top" FontSize="25" />
+				<Text>Password: </Text>
+				<TextBox PlaceholderText="Enter password..." Value="{password}" Alignment="Top" FontSize="25" />
+				<Text>Phone number: </Text>
+				<TextBox PlaceholderText="" Value="{phone}" Alignment="Top" FontSize="25" />
+				<Button Text="Submit" IsEnabled="{inputed}" Clicked="{registerButton}" Color="#0000" Alignment="Left" />
+				<Button Text="Go Back" Clicked="{goLoginPage}" Color="#0000" Alignment="Left" />
+			</StackPanel>
+		</ScrollView>
+	</DockPanel>
+</Page>
+

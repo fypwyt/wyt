@@ -1,0 +1,32 @@
+<Page ux:Class="MainPage">
+	<Router ux:Dependency="router"/>
+	<DockPanel>
+		<JavaScript File="MainPage.js"/>
+
+		<StatusBarBackground DockPanel.Dock="Top" />
+		<Text TextColor="#ff0000" Value="{err}" Alignment="Center" />
+
+		<ScrollView ClipToBounds="true">
+			<StackPanel>
+				<StackPanel>
+				<ColumnLayout ColumnSpacing=-230/>
+				<Each Items="{usernameStr}">
+						<Text >Welcome!</Text>
+						<Text Value="{_id}"/>	
+						<Text>Credit point: NA</Text>
+				</Each>	
+				</StackPanel>	
+				<Button Text="Setting" Margin="50,20" Color="#25a" Clicked="{goSettingPage}"/>
+				<Button Text="Find Activities" Margin="10,20" Color="#25a" Y="0" Clicked="{goViewActivityPage}"/>
+				<Button Text="View Joined Activities" Margin="10,20" Color="#25a" Y="0" Clicked="{goJoinedActivity}"/>
+				<Button Text="Create Activity" Margin="10,20" Color="#25a" Clicked="{goCreateActivityPage}"/>
+				<Button Text="View Chatroom List" Margin="10,20" Color="#25a" Clicked="{goChatroomListPage}"/>
+				<Button Text="QR Code Generation" Margin="10,20" Color="#25a" Clicked="{goQRCode}"/>
+				<Button Text="Find Coordination" Margin="10,20" Color="#25a" Clicked="{goFindCoordination}"/>
+				<Button Text="HTML" Margin="10,20" Color="#25a" Clicked="{goHTML}"/>
+				<Button Text="TEST" Margin="10,20" Color="#25a" Clicked="{test}"/>
+			</StackPanel>
+		</ScrollView>
+	</DockPanel>
+</Page>
+

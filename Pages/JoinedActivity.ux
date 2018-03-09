@@ -1,0 +1,30 @@
+<Page ux:Class="JoinedActivity">
+	<Router ux:Dependency="router"/>
+	<DockPanel>
+		<JavaScript File="JoinedActivity.js"/>
+
+		<StatusBarBackground DockPanel.Dock="Top" />
+		<Text TextColor="#ff0000"  Alignment="Center" />
+
+		<ScrollView ClipToBounds="true">
+			<StackPanel>
+				<Text FontSize="35">Joined Activity List</Text>
+				<Button Text="Find" Clicked="{findActivity}"/>
+				<Text FontSize="25">Result: </Text>
+				<Each Items="{infoShow.key}">
+						<Text>-------------------</Text>
+						<Text>Driver: </Text>
+						<Text Value="{_id}"/>
+						<Text>Start Time</Text>
+						<Text Value="{startTime}"/>
+						<Text>End Time</Text>
+						<Text Value="{endTime}"/>
+						<Text>Start Location</Text>
+						<Text Value="{startLocation.street}"/>
+				</Each>	
+				<Button Text="Go Back" Clicked="{goBack}"/>
+			</StackPanel>
+		</ScrollView>
+	</DockPanel>
+</Page>
+

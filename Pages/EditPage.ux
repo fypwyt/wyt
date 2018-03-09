@@ -1,0 +1,29 @@
+<Page ux:Class="EditPage">
+	<Router ux:Dependency="router"/>
+	<DockPanel>
+		<JavaScript File="EditPage.js"/>
+
+		<ScrollView ClipToBounds="true">
+			<StackPanel Alignment="VerticalCenter" Margin="0,-80,50,0">
+				<Text FontSize="50">Update Profile</Text>
+				<Text>New Password: </Text>
+				<TextBox PlaceholderText="Enter password..." Value="{password}" Alignment="Top" FontSize="25" />
+				<Text>New Phone Number: </Text>
+				<TextBox PlaceholderText="Enter phone..." Value="{phone}" Alignment="Top" FontSize="25" />
+				<Text>Email: </Text>
+				<TextBox PlaceholderText="Enter Email address..." Value="{email}" Alignment="Top" FontSize="25" />
+				<Text>ID Card Number: </Text>
+				<TextBox PlaceholderText="Enter here..." Value="{idCard}" Alignment="Top" FontSize="25" />
+				<Text>Car model number: </Text>
+				<TextBox PlaceholderText="Enter here..." Value="{model}" Alignment="Top" FontSize="25" />
+				<Text>Add car photo: </Text>
+				<TextBox PlaceholderText="Enter here..." Value="{photo}" Alignment="Top" FontSize="25" />
+				<Text>Vehicle number: </Text>
+				<TextBox PlaceholderText="Enter here..." Value="{vehicleNo}" Alignment="Top" FontSize="25" />
+				<Button Text="Submit" IsEnabled="{inputed}" Clicked="{updateButton}" Color="#0000" Alignment="Left" />
+				<Button Text="Go Back" Clicked="{goBack}" Color="#0000" Alignment="Left" />
+			</StackPanel>
+		</ScrollView>
+	</DockPanel>
+</Page>
+

@@ -1,0 +1,22 @@
+<Page ux:Class="LoginPage">
+	<Router ux:Dependency="router"/>
+	<DockPanel Background="#3700d7">
+		<Text ux:Class="WhiteText" TextColor="#ffffff" />
+		<TextInput ux:Class="WhiteTextInput" PlaceholderColor="#ffffff80" TextColor="#ffffff" CaretColor="#ffffff" FontSize="25"/>
+
+		<JavaScript File="LoginPage.js"/>
+		<Grid Rows="1*,1*">
+			<StackPanel Alignment="VerticalCenter">
+				<WhiteText Alignment="HorizontalCenter" FontSize="95">WYT</WhiteText>
+				<WhiteText Alignment="HorizontalCenter" FontSize="25">Free Ride!</WhiteText>
+			</StackPanel>
+			<StackPanel Alignment="VerticalCenter" Margin="50,0,50,0">
+				<WhiteTextInput PlaceholderText="username" Value="{username}" Alignment="HorizontalCenter"  FontSize="25"/>
+				<WhiteTextInput PlaceholderText="password" IsPassword="true" Value="{password}" Alignment="HorizontalCenter" FontSize="25"/>
+				<Button Text="Log In Here!" IsEnabled="{inputed}" Clicked="{goMainPage}" Color="#0000" />
+				<Button Text="Register Now" Clicked="{goRegisterPage}" Color="#0000" />
+			</StackPanel>
+		</Grid>
+	</DockPanel>
+</Page>
+

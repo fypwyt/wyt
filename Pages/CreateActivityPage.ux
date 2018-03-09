@@ -1,0 +1,43 @@
+<Page ux:Class="CreateActivityPage">
+	<Router ux:Dependency="router"/>
+	<DockPanel>
+		<JavaScript File="CreateActivityPage.js"/>
+
+		<StatusBarBackground DockPanel.Dock="Top" />
+		<Text TextColor="#ff0000" Value="{err}" Alignment="Center" />
+
+		<ScrollView ClipToBounds="true">
+			<StackPanel>
+				<Text FontSize="35">Create Activity Page</Text>
+				<StackPanel Alignment="VerticalCenter" Margin="0,0,50,0">
+					<Text FontSize="25">Trip Start Time: </Text>
+					<TextBox PlaceholderText="Format: HH:MM(eg. 18:00)" Value="{startTime}" Alignment="Top" FontSize="15" />
+					<Text FontSize="25">Trip End Time: </Text>
+					<TextBox PlaceholderText="Format: HH:MM(eg. 18:30)" Value="{endTime}" Alignment="Top" FontSize="15" />
+					<Text FontSize="25">Driver username: </Text>
+					<TextBox PlaceholderText="" Value="{username}" Alignment="Top" FontSize="15" />
+					<Text FontSize="25">Car model: </Text>
+					<TextBox PlaceholderText="" Value="{carname}" Alignment="Top" FontSize="15" />
+					<Text FontSize="25">Start Location: </Text>
+					<TextBox PlaceholderText="Street" Value="{streetS}" Alignment="Top" FontSize="15" />
+					<TextBox PlaceholderText="building" Value="{buildingS}" Alignment="Top" FontSize="15" />
+					<TextBox PlaceholderText="district" Value="{districtS}" Alignment="Top" FontSize="15" />
+					<TextBox PlaceholderText="coordination x" Value="{coordSX}" Alignment="Top" FontSize="15" />
+					<TextBox PlaceholderText="coordination y" Value="{coordSY}" Alignment="Top" FontSize="15" />
+
+					<Text FontSize="25">Target Location: </Text>
+					<TextBox PlaceholderText="Street" Value="{streetT}" Alignment="Top" FontSize="15" />
+					<TextBox PlaceholderText="building" Value="{buildingT}" Alignment="Top" FontSize="15" />
+					<TextBox PlaceholderText="district" Value="{districtT}" Alignment="Top" FontSize="15" />
+					<TextBox PlaceholderText="coordination x" Value="{coordTX}" Alignment="Top" FontSize="15" />
+					<TextBox PlaceholderText="coordination y" Value="{coordTY}" Alignment="Top" FontSize="15" />
+					<Text FontSize="25">Create chatroom: </Text>
+					<TextBox PlaceholderText="Chatroom Name" Value="{chatroomName}" Alignment="Top" FontSize="15" />
+				</StackPanel>
+				<Button Text="Submit!" IsEnabled="{inputed}" Clicked="{createActivity}"/>
+				<Button Text="Go Back" Clicked="{goBack}"/>
+			</StackPanel>
+		</ScrollView>
+	</DockPanel>
+</Page>
+

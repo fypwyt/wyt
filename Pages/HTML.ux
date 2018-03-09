@@ -1,0 +1,23 @@
+<Page ux:Class="HTML">
+	<Router ux:Dependency="router"/>
+	<JavaScript File="HTML.js"/>
+	<DockPanel>
+		 <NativeViewHost>
+            <WebView Dock="Fill" File="C:\Users\common\Desktop\Workplace\WYT Carpooling 30-1-2018\build\Local\Designer\fs_data\viewmap.html">
+                <PageLoaded>
+                    <EvaluateJS Handler="{onPageLoaded}">
+                        var result = {
+                            url : document.location.href
+                        };
+                        return result;
+                    </EvaluateJS>
+                </PageLoaded>
+            </WebView>
+        </NativeViewHost>
+		
+		<ScrollView ClipToBounds="true">
+			<Button Text="Go Back" Clicked="{goBack}"/>
+		</ScrollView>
+	</DockPanel>
+</Page>
+
